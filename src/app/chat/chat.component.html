@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-list>
+    <div class="make-scrollable" #scrollMe [scrollTop]="scrollMe.scrollHeight" >
+      <mat-list-item *ngFor="let msg of messages$ | async">
+        <h2 class="title" mat-line>{{msg.name}} {{msg.surname}}</h2>
+        <p mat-line>{{msg.message}}</p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </div>
+  </mat-list>
+  <app-add-message></app-add-message>
+</mat-card>

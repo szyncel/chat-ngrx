@@ -1,0 +1,14 @@
+<form *ngIf="formValue" class="example-form" #f="ngForm">
+  <div class="row">
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="formValue.name" (change)="updateState()" name="name" placeholder="Imie">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="formValue.surname" (change)="updateState()" name="surname" placeholder="Nazwisko">
+    </mat-form-field>
+  </div>
+  <mat-form-field class="example-full-width">
+    <textarea matInput [(ngModel)]="formValue.message" (change)="updateState()" name="message" placeholder="Wiadomość"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="send(f)">Wyślij</button>
+</form>

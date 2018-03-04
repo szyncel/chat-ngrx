@@ -1,0 +1,11 @@
+<div class="row">
+  <ng-container *ngIf="!(user$ | async)">
+      <h2>Zaloguj sie aby korzystać z chatu</h2>
+      <p>Login: <strong>test</strong> , Hasło:<strong>test</strong></p>
+      <button mat-raised-button color="primary" (click)="openDialog()">Zaloguj sie</button>
+  </ng-container>
+  <ng-container *ngIf="(user$ | async)">
+      <h2>Witaj,  możesz przejść do chatu</h2>
+      <button mat-raised-button color="primary" (click)="logout()">Wyloguj sie</button>
+  </ng-container>
+</div>

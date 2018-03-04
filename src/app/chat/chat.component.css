@@ -1,0 +1,11 @@
+mat-list .make-scrollable {
+  height: 250px;
+  overflow-y: scroll;
+  background: rgb(250, 250, 250);
+  /* border: 1px solid rgb(240, 240, 240); */
+}
+
+h2.mat-line {
+  color: #3f51b5;
+  
+}
